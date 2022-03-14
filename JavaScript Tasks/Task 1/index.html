@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3 id="day"></h3>
+    <h3 id="time"></h3>
+    <script>
+        let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        let day = new Date();
+        let currentDay = `Today is : ${days[day.getDay()]}`;
+        let time = new Date();
+        let currentTime = `Current Time is : ${time.toLocaleString('Pk', {
+            hour: 'numeric',
+            hour12: true,
+            minute: 'numeric',
+            second: 'numeric',
+        })}`;
+        document.getElementById("day").innerText = currentDay;
+        document.getElementById("time").innerText = currentTime;
+    </script>
+</body>
+
+</html>

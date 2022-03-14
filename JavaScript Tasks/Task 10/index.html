@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let temp1 = prompt("Enter Temperature to convert in Fahrenheit");
+        let toFahrenheit = (temp1 * 9) / 5 + 32;
+        let message1 = temp1 + "\xB0C is equal to " + toFahrenheit + "\xB0F";
+        alert(message1);
+
+        let temp2= prompt("Enter Temperature to Convert in Celcius");
+        let toCelsius = ((temp2 - 32) * 5) / 9;
+        let message2 = temp2 + "\xB0F is equal to " + toCelsius + "\xB0C.";
+        alert(message2);
+    </script>
+</body>
+
+</html>

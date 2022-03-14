@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <input type="text" name="" id="cityName" placeholder="Enter Your City">
+    <button onClick="getWeather()">Check Weather</button>
+    <h3 id="result"></h3>
+
+
+    <script>
+        function getWeather() {
+            let cityName = document.getElementById("cityName").value;
+            axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=c283ccb0b1e9db29fb75b0db8176a9c0&units=metric`)
+                .then(function (response) {
+                    console.log(response.data.main.temp);
+                   document.getElementById("result").innerText=response.data.main.temp;
+                })
+        }
+        
+    </script>
+</body>
+
+</html>
